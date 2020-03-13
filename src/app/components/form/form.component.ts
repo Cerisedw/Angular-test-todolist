@@ -8,7 +8,7 @@ import { TacheComponent } from '../tache/tache.component';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  @Output() insert : EventEmitter<Tache> = new EventEmitter<Tache>();
+  @Output("insert") insert : EventEmitter<Tache> = new EventEmitter<Tache>();
   nom: string= "";
   deadLine: Date = null;
   priorite: boolean = false;

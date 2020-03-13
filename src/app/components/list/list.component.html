@@ -1,0 +1,12 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Dead Line</th>
+            <th>Priorité</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr app-tache *ngFor="let t of taches" [tache]="t" (delete)="executeDeleteTache($event)" (changePrio)="exChangePrio($event)"></tr>
+    </tbody>
+</table>

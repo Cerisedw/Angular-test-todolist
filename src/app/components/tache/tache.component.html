@@ -1,0 +1,8 @@
+    <td>{{ tache.nom }}</td>
+    <td>{{ tache.deadLine }}</td>
+    <td [style.backgroundColor]="tache.priorite ? 'red' : ''" (click)="changePriorite(tache)" ></td>
+    <td>
+        <button (click)="updateTache(tache)">Update</button>
+        <button (click)="deleteTache(tache)" >Delete</button>
+    </td>
+

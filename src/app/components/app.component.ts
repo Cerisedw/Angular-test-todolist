@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Tache } from '../models';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-list';
+  tasks = [];
+
+  create(task: Tache) {
+    console.log(task);
+    this.tasks.push(task);
+  }
 }

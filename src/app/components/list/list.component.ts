@@ -26,7 +26,6 @@ export class ListComponent implements OnInit, OnChanges {
   }
 
   exChangePrio(item: Tache){
-    console.log(item);
     const task = this.taches.find(t => t.nom == item.nom);
     task.priorite = !task.priorite;
   }

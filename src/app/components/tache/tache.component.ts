@@ -24,7 +24,6 @@ export class TacheComponent implements OnInit, OnChanges {
   }
 
   updateTache(item:Tache){
-    console.log(item);
     item.nom = "UpdateNom";
   }
 

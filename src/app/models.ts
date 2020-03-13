@@ -1,5 +1,5 @@
 export class Tache {
     nom : string;
-    deadLine : string;
+    deadLine : Date;
     priorite : boolean;
   }

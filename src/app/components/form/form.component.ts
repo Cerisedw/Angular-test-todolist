@@ -10,7 +10,7 @@ import { TacheComponent } from '../tache/tache.component';
 export class FormComponent implements OnInit {
   @Output() insert : EventEmitter<Tache> = new EventEmitter<Tache>();
   nom: string= "";
-  deadLine: string = "";
+  deadLine: Date = null;
   priorite: boolean = false;
 
   newTask : Tache;
@@ -25,7 +25,6 @@ export class FormComponent implements OnInit {
     item.nom = this.nom;
     item.deadLine = this.deadLine;
     item.priorite = this.priorite;
-    console.log(item);
     this.insert.emit(item);
   }
 

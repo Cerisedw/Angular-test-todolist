@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Tache } from 'src/app/models';
+import { toUnicode } from 'punycode';
+import { temporaryDeclaration } from '@angular/compiler/src/compiler_util/expression_converter';
 
 @Component({
   selector: 'app-list',
@@ -30,8 +32,16 @@ export class ListComponent implements OnInit, OnChanges {
     task.priorite = !task.priorite;
   }
 
-  insertTask(item:Tache){
-    this.taches.push(item);
-  }
+  // insertTask(item:Tache){
+  //   const isFound = this.searchForDuplicate(item);
+  //   if(!isFound){
+  //     this.taches.push(item);
+  //   }
+  // }
+
+  // private searchForDuplicate(item: Tache): boolean{
+  //   const found = this.taches.find((t: Tache)=>t.nom === item.nom);
+  //   return found != null;
+  // }
 
 }

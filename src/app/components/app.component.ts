@@ -11,6 +11,15 @@ export class AppComponent {
   tasks = [];
 
   create(task: Tache) {
-    this.tasks.push(task);
+    const isFound = this.searchForDuplicate(task);
+    if(!isFound){
+      this.tasks.push(task);
+    }
   }
+
+  private searchForDuplicate(item: Tache): boolean{
+    const found = this.tasks.find((t: Tache)=>t.nom === item.nom);
+    return found != null;
+  }
+
 }

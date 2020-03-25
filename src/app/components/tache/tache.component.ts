@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angu
 import { Tache } from 'src/app/models';
 
 @Component({
-  selector: '[app-tache]',
+  selector: '[app-tache]', // afin de faire <tr app-tache >
   templateUrl: './tache.component.html',
   styleUrls: ['./tache.component.css']
 })

@@ -26,6 +26,11 @@ export class FormComponent implements OnInit {
     item.deadLine = this.deadLine;
     item.priorite = this.priorite;
     this.insert.emit(item);
+
+    this.nom = '';
+    this.deadLine = null;
+    this.priorite = null;
+
   }
 
 }
